@@ -1,0 +1,76 @@
+$button-size : 1.2rem; 
+$transition: .3s; // increase this to see the transformations in slow-motion
+$color: #505050;
+ 
+.lines-button {
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 5px 5px;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background: #efefef;
+  }
+}
+
+@mixin line {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 1px;
+  background: $color;
+  transition: $transition;
+}
+
+.lines {
+   
+  @include line;
+  position: relative; 
+  top: -1px;
+
+  &:before, &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    transform-origin: left center;
+  }
+  &:before { top: 7px; }
+  &:after { top: -7px; }
+}
+
+.lines-button:hover {
+  opacity: 1;
+     
+  .lines {
+    &:before { top: 8px; }
+    &:after { top: -8px; }
+  }
+}
+
+.lines-button.active {
+  transform: scale3d(.8,.8,.8);
+}
+ 
+.lines-button.active .lines{
+    &:before,
+    &:after {
+      top: 0;
+      width: $button-size/1.8;
+    }
+   
+    &:before { transform: rotate3d(0,0,1,40deg); }
+    &:after { transform: rotate3d(0,0,1,-40deg); }
+}
+
+.lines-button.active {
+  transform: scale3d(.8,.8,.8) rotate3d(0,0,1,90deg); // Rotate around the z-axis
+}

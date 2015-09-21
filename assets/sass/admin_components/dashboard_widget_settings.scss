@@ -1,0 +1,41 @@
+.westco-dashboard-settings {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	height: 0;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	background: #fafafa;
+	transition: all .3s ease;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	&.active {
+		overflow: scroll;
+		padding: 10px;
+		height: 100%;
+	}
+
+	h3 {
+		padding: 0 0 10px 0;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		margin-bottom: 10px;
+	}
+
+	button.page-title-action {
+		margin-left: 15px;
+		top: 0;
+		outline: none;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.westco_dashboard_setting {
+		margin: 0  0 15px 15px;
+	}
+}

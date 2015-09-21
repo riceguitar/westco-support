@@ -1,0 +1,42 @@
+.intercom-button {
+  color: #ffffff; 
+  background: #323232;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 10px;
+  z-index: 100;
+  padding: 10px;
+  box-shadow: 0 3px 3px #cccccc;
+  text-decoration: none;
+  font-family: 'sans-serif';
+  transition: all .2s linear;
+  
+  p {
+    color: #ffffff;
+    font-family: sans-serif !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0 5px 0 0;
+    transition: all .2s linear;
+  }
+  
+  .westco-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain !important;
+    width: 60px;
+    height: 30px;
+  }
+
+  &:hover {
+    background: #ffffff;
+    box-shadow: 0 0 10px #dddddd;
+    transition: all .2s linear;
+    p {
+      color: #25a8e0;
+      transition: all .2s linear;
+    }
+  }
+}
