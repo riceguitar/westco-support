@@ -13,7 +13,6 @@ class ContactInformation implements WidgetContent {
 	{
 		return array(
 			'hideable'		=> false,
-			'setting_slug'	=> 'contact_info',
 			'title'			=> 'Get in touch!',
 		);
 	}
