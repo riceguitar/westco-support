@@ -153,7 +153,7 @@ class Westco_Support
         // Set up all of the github stuff.
         $username = 'riceguitar';
         $repo = 'westco-support';
-        new WestcoSupportUpdater($username, $repo);
+        new WestcoSupportUpdater(__FILE__, $username, $repo);
     }
 }
 
