@@ -19,6 +19,7 @@ trait RegistersWidgetContent {
 	public $content_classes = array(
 		'WestcoHeading',
 		'InspirationalVerse',
+		'InspirationalQuote',
 		'ContactInformation',
 	);
 

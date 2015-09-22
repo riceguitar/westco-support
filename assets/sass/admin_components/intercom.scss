@@ -1,12 +1,13 @@
 .intercom-button {
-  color: #ffffff; 
+  
+  color: #ffffff;
   background: #323232;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  border-radius: 10px;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 10px 0 0 0;
   z-index: 100;
-  padding: 10px;
+  padding: 5px 10px;
   box-shadow: 0 3px 3px #cccccc;
   text-decoration: none;
   font-family: 'sans-serif';
