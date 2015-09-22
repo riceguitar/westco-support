@@ -20,6 +20,7 @@ trait RegistersWidgetContent {
 		'WestcoHeading',
 		'InspirationalVerse',
 		'InspirationalQuote',
+		'LatestBlogPost',
 		'ContactInformation',
 	);
 

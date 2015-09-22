@@ -3,7 +3,7 @@
     Plugin Name: 95 West Support
     Plugin URI: http://95west.co
     Description: Thanks for choosing 95 West! We are here to help you. On top of making some tweaks to better your website, this plugin makes it easy for you to reach us for any concerns or questions you might have!
-    Version: 0.1
+    Version: 1.0
     Author: 95 West
     Author URI: https://95west.co/
 */
@@ -146,13 +146,14 @@ class Westco_Support
     }
 
     /**
-     * Instantiates the updater class
+     * Instantiates the updater class and all of it's needed values.
      */
     private function runUpdater()
     {
-        // Set up all of the github stuff.
+        // Set up all of the github info.
         $username = 'riceguitar';
         $repo = 'westco-support';
+        // Instantiate the updater class
         new WestcoSupportUpdater(__FILE__, $username, $repo);
     }
 }

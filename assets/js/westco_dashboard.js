@@ -18,9 +18,7 @@ var westco_widget = new Vue({
 		saveDisplaySettings: function (e)
 		{
 			e.preventDefault();
-			this.buttonContent = this.buttonContent + ' <i class="fa fa-spinner fa-spin"></i>';
-			// data = {
-			// 	action: 'westco_dashboard_settings',
+			this.buttonContent = 'Saving... <i class="fa fa-spinner fa-spin"></i>';
 			var data = {
 				action: 'westco_dashboard_settings',
 				form: $('#westco_dashboard_settings_form').serializeArray(),
