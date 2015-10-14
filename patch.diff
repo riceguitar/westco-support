@@ -1,0 +1,13 @@
+diff --git a/westcosupport.php b/westcosupport.php
+index 684f8f7..565419d 100644
+--- a/westcosupport.php
++++ b/westcosupport.php
+@@ -3,7 +3,7 @@
+     Plugin Name: 95 West Support
+     Plugin URI: http://95west.co
+     Description: Thanks for choosing 95 West! We are here to help you. On top of making some tweaks to better your website, this plugin makes it easy for you to reach us for any concerns or questions you might have!
+-    Version: 1.0
++    Version: 1.0.1
+     Author: 95 West
+     Author URI: https://95west.co/
+ */
