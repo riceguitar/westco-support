@@ -41,7 +41,8 @@ class AdminMenuBar
 		if (current_user_can('manage_options')) {
 			add_action('wp_enqueue_scripts', array($this, 'addIntercom'));
 			add_action('admin_enqueue_scripts', array($this, 'addIntercom'));
-		}		
+		}
+
 		// Adds the 95 west icon
 		add_action('admin_bar_menu', array($this, 'addAdminBarMenu'));
 		add_action('admin_bar_menu', array($this, 'removeWordPressMenu'), 20);
@@ -68,7 +69,7 @@ class AdminMenuBar
 			padding: 0 5px;
 		}
 		</style>
-		<?
+		<?php
 	}
 
 	/**
@@ -76,25 +77,24 @@ class AdminMenuBar
 	 */
 	public function addAdminBarMenu($wp_admin_bar)
 	{
-
 		$args = array(
 			'id'    => '95-west-support',
 			'title' => '',
 			'meta'  => array( 'class' => 'my-toolbar-page' )
 		);
 
-		$wp_admin_bar->add_node( $args );
+		$wp_admin_bar->add_node($args);
 
 		$args = array();
 			
-		array_push($args,array(
+		array_push($args, array(
 			'id'		=>	'home',
 			'title'		=>	'Visit 95 West',
 			'href'		=>	WESTCO_HOME_PAGE,
 			'parent'	=>	'95-west-support',
 		));
 
-		array_push($args,array(
+		array_push($args, array(
 			'id'     	=> 'support',
 			'title'		=>	'Create a Support Ticket',
 			'href'		=> '#',
@@ -102,7 +102,7 @@ class AdminMenuBar
 			'meta'		=> array(
 				'class' => 'intercom-activate',
 			),
-		));		
+		));
 		sort($args);
 		for($a=0;$a<sizeOf($args);$a++)
 		{
@@ -131,7 +131,7 @@ class AdminMenuBar
 		?>
 			<a class="intercom-activate intercom-button" href="#">
 				<p>Chat with</p> 
-				<div class="westco-icon" style="background: url('<?echo WESTCO_ASSETS_URL;?>images/95west_large.png') no-repeat center;"></div>
+				<div class="westco-icon" style="background: url('<?php echo WESTCO_ASSETS_URL; ?>images/95west_large.png') no-repeat center;"></div>
 			</a>
 		<?php
 	}
