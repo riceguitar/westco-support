@@ -3,7 +3,7 @@
     Plugin Name: 95 West Support
     Plugin URI: http://95west.co
     Description: Thanks for choosing 95 West! We are here to help you. On top of making some tweaks to better your website, this plugin makes it easy for you to reach us for any concerns or questions you might have!
-    Version: 1.0.1
+    Version: 1.0.2
     Author: 95 West
     Author URI: https://95west.co/
 */
@@ -104,7 +104,7 @@ class Westco_Support
         wp_enqueue_script('westco_vue', WESTCO_ASSETS_URL . 'vendor/vuejs/vue.min.js');
         wp_enqueue_script('westco_vue_resource', WESTCO_ASSETS_URL . 'vendor/vuejs/vue-resource.min.js');
         wp_enqueue_script('westco_dashboard_js', WESTCO_ASSETS_URL . 'js/westco_dashboard.js');
-        wp_enqueue_script('westco_intercom', WESTCO_ASSETS_URL . 'js/intercom.js');
+        // wp_enqueue_script('westco_intercom', WESTCO_ASSETS_URL . 'js/intercom.js');
 
         // Give needed varialbes to script
         wp_localize_script('westco_dashboard_js', 'WPURLS', array( 'westcoAjaxUrl' => WESTCO_SUPPORT_URL . 'services/AjaxHandler.php' ));
@@ -129,7 +129,7 @@ class Westco_Support
         // If admin, and not in customizer load intercom.
         global $wp_customize;
         if (!isset($wp_customize) && current_user_can('manage_options')) {
-            wp_enqueue_script('westco_intercom', WESTCO_ASSETS_URL . 'js/intercom.js');
+            // wp_enqueue_script('westco_intercom', WESTCO_ASSETS_URL . 'js/intercom.js');
         }  
     }
 

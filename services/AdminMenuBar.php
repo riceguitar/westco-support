@@ -37,11 +37,11 @@ class AdminMenuBar
 		add_action('wp_enqueue_scripts', array($this, 'addAdminBarIcon'));
 		add_action('admin_enqueue_scripts', array($this, 'addAdminBarIcon'));
 
-		// Add intercom icon in admin and frontend
-		if (current_user_can('manage_options')) {
-			add_action('wp_enqueue_scripts', array($this, 'addIntercom'));
-			add_action('admin_enqueue_scripts', array($this, 'addIntercom'));
-		}
+		// // Add intercom icon in admin and frontend
+		// if (current_user_can('manage_options')) {
+		// 	add_action('wp_enqueue_scripts', array($this, 'addIntercom'));
+		// 	add_action('admin_enqueue_scripts', array($this, 'addIntercom'));
+		// }
 
 		// Adds the 95 west icon
 		add_action('admin_bar_menu', array($this, 'addAdminBarMenu'));
@@ -94,15 +94,15 @@ class AdminMenuBar
 			'parent'	=>	'95-west-support',
 		));
 
-		array_push($args, array(
-			'id'     	=> 'support',
-			'title'		=>	'Create a Support Ticket',
-			'href'		=> '#',
-			'parent' 	=> '95-west-support',
-			'meta'		=> array(
-				'class' => 'intercom-activate',
-			),
-		));
+		// array_push($args, array(
+		// 	'id'     	=> 'support',
+		// 	'title'		=>	'Create a Support Ticket',
+		// 	'href'		=> '#',
+		// 	'parent' 	=> '95-west-support',
+		// 	'meta'		=> array(
+		// 		'class' => 'intercom-activate',
+		// 	),
+		// ));
 		sort($args);
 		for($a=0;$a<sizeOf($args);$a++)
 		{

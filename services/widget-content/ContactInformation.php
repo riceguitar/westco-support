@@ -24,7 +24,7 @@ class ContactInformation implements WidgetContent {
 	{
 		echo '<p><span style="display: inline-block; vertical-align:middle;" class="fa fa-phone fa-lg"></span> ' . $this->phone . '</p>';
 		echo '<p><span style="display: inline-block; vertical-align:middle;" class="fa fa-envelope"></span> ' . $this->email . '</p>';
-		echo '<p><a href="' . $this->websiteUrl . '">Visit Our Website</a> / <a href="#" class="intercom-activate">Chat with us</a></p>';
+		echo '<p><a href="' . $this->websiteUrl . '">Visit Our Website</a></p>';
 	}	
 	
 }
